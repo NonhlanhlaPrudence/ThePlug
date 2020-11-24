@@ -1,0 +1,56 @@
+<div class="homepage">
+  <div class="homepage__intro text-center">
+    <div class="container">
+      <h1>
+        The plug is a platform where individuals are able to advertise their
+        skills and showcase their capabilities.
+      </h1>
+    </div>
+  </div>
+
+  <div class="homepage__body">
+    <!--small space nyana yabo-->
+
+    <div class="container">
+      <div class="homepage__category">
+        <div class="row">
+          <div class="col-6 col-md-3 text-center mb-2 category" (click)="shuffle_by_category('Cooking')">
+            <img src="../../../assets/images/cooking.png" width="100px" class="mb-2" />
+            <br />
+            <span>Cooking</span>
+          </div>
+          <div class="col-6 col-md-3 text-center mb-2 category" (click)="shuffle_by_category('Laundry')">
+            <img src="../../../assets/images/laundry.png" width="100px" class="mb-2" />
+            <br />
+            <span>Laundry</span>
+          </div>
+          <div class="col-6 col-md-3 text-center mb-2 category" (click)="shuffle_by_category('Photographer')">
+            <img src="../../../assets/images/photographer.png" width="100px" class="mb-2" />
+            <br />
+            <span>Photography</span>
+          </div>
+          <div class="col-6 col-md-3 text-center mb-2 category" (click)="shuffle_by_category('Bricklaying')">
+            <img src="../../../assets/images/brickwork.png" width="100px" class="mb-2" />
+            <br />
+            <span>Brickwork</span>
+          </div>
+        </div>
+
+
+        <div style="height: 5vh;"></div>
+
+
+        <div class="homepage__cards">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 animate__animated animate__fadeIn" *ngFor="let user of users | slice: 0:8;">
+                <UserCard [user]="user"></UserCard>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+      </div>
+    </div>
+  </div>

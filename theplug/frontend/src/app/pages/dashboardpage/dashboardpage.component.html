@@ -1,0 +1,26 @@
+<div class="dashboard">
+
+  <div class="dashboard__intro">
+    <div class="dashboard__header text-center">
+      <div class="container">
+        <h1>
+          Find your next blablabla..
+        </h1>
+      </div>
+    </div>
+    <div class="dashboard__filter"></div>
+  </div>
+
+  <div style="height: 1vh;"></div>
+
+  <div class="dashboard__content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 animate__animated animate__fadeIn" *ngFor="let user of users;">
+          <UserCard [user]="user"></UserCard>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,74 @@
+<div class="edit">
+
+  <div class="edit__card animate__animated animate__fadeIn">
+    <div class="edit__cardLeft">
+
+      <div class="video">
+        <video width="100%" controls>
+          <source src="../../../assets/test.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <div class="edit__cardRight text-center" *ngIf="storeService.get_user">
+      <div class="row">
+        <button class="btn btn-outline-primary btn-sm ml-4 animate__animated animate__fadeInRight animate__delay-3s"
+          (click)="back()">
+          < &nbsp; Back</button>
+      </div>
+      <small class="h3 text-muted">
+        Edit Profile
+      </small>
+      <hr class="mb-3 mx-5">
+
+      <!-- <p class="text-muted">Email: {{ storeService.get_user.email }}</p>
+
+      <span
+        class="text-muted">{{ storeService.get_user.skills.length > 0 ? 'SKILLS' : 'SKILLS NOT UPDATED' }}</span><br>
+      <small class="text-muted font-italic">
+        <span *ngFor="let skill of storeService.get_user.skills">{{ skill.name }}, </span>
+      </small> -->
+
+      <div class="modal-body text-center mt-3">
+
+
+        <form>
+          <fieldset>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col text-left">
+                  <label for="name">name</label>
+                  <input type="text" class="form-control shadow-none" id="name" name="name" #name
+                    aria-describedby="name" [value]="storeService.get_user.name" placeholder="Enter name">
+                </div>
+                <div class="col text-left">
+                  <label for="surname">Surname</label>
+                  <input type="text" class="form-control shadow-none" id="surname" name="surname" #surname
+                    aria-describedby="surname" [value]="storeService.get_user.surname" placeholder="Enter surname">
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group text-left">
+              <label for="skills">Provide your skills</label>
+              <textarea class="form-control" placeholder="Enter your skills" id="skills" name="skills" #skills
+                rows="3"></textarea>
+            </div>
+
+
+            <br>
+            <button type="button" class="btn btn-primary">Edit Profile</button>
+          </fieldset>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

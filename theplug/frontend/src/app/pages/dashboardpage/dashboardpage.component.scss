@@ -1,0 +1,70 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  .dashboard__intro {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(
+        to right top,
+        #eb6964af,
+        #eb6864af,
+        #eb6864af,
+        #eb6864af,
+        #eb6864af,
+        #ef7179af,
+        #f07b8eaf,
+        #ef86a0af,
+        #e8a0c2af,
+        #e0bad9af,
+        #ddd1e4af,
+        #e5e5e500
+      ),
+      url("../../../assets/images/light_bg.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+      color: #ffffff;
+      font-style: italic;
+    }
+  }
+}
+
+// big
+@media only screen and (min-width: 600px) {
+  .dashboard__intro {
+    height: 40vh !important;
+  }
+
+  .dashboard__content {
+    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+// small
+@media only screen and (max-width: 600px) {
+  .dashboard__content {
+    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .dashboard__intro {
+    height: 30vh !important;
+
+    h1 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

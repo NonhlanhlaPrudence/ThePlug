@@ -1,0 +1,70 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+
+  .homepage__intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(
+        to right top,
+        #eb6964af,
+        #eb6864af,
+        #eb6864af,
+        #eb6864af,
+        #eb6864af,
+        #ef7179af,
+        #f07b8eaf,
+        #ef86a0af,
+        #e8a0c2af,
+        #e0bad9af,
+        #ddd1e4af,
+        #e5e5e500
+      ),
+      url("../../../assets/images/light_bg.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+      margin-top: -50px;
+      color: #ffffff;
+      font-style: italic;
+    }
+  }
+
+  .homepage__body {
+    height: auto;
+    padding-top: 10vh;
+
+    .homepage__category {
+      height: 30vh;
+
+      .category {
+        cursor: pointer;
+        transition: 600ms;
+
+        font-weight: bolder;
+        color: var(--plug-primary-color);
+
+        &:hover {
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .homepage__category {
+        height: 40vh !important;
+      }
+    }
+
+    .homepage__cards {
+      height: auto;
+    }
+  }
+}
