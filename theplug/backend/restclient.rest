@@ -1,0 +1,61 @@
+# # Url for registering a user 
+POST http://localhost:3500/users/register_users
+Content-Type: application/json
+
+{
+      
+       "name": "Lerapo",
+      "surname": "Lebota",
+       "email":"lerapo@gmail.com",
+       "password":"12345678"
+ 
+}
+
+###
+
+POST http://localhost:3500/users/login_users
+
+{
+       "email":"lerapo@gmail.com",
+       "password":"12345678"
+}
+
+###
+# A url for posting default skills
+POST http://localhost:3500/skills/default_skills
+Content-Type: application/json
+
+{
+
+}
+
+###
+# # A url for getting all skills
+# GET http://localhost:3500/skills/get_all_skills
+# Content-Type: application/json
+
+# {
+
+# }
+
+###
+# # # #URL for updating a user
+PATCH http://localhost:3500/users/update_users/5f7c26ad8a098302e98dfb2c
+Content-Type: application/json
+
+# {
+    
+      
+      "phoneNumber": "0742755603",
+      "password": "12345"
+
+# }
+
+###
+# # # A url for getting all skills
+GET http://localhost:3500/users/get_user/5f8e8048c7c57a0509be33bd
+Content-Type: application/json
+
+{
+
+}
